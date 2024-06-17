@@ -1,6 +1,4 @@
-#学校：贵州大学
-#编写人：冯林坤
-#创建时间：2024/6/16 14:50
+
 import pandas as pd
 from openpyxl import Workbook
 import jieba
@@ -324,8 +322,8 @@ def score_computer(input_excel):
 
 
 if __name__=='__main__':
-    input_excel='C:\\Users\\11048\Desktop\\evaluate.xlsx'#输入文件有4列：题型、科室、LLM回答、真实答案；
-    output_excel='C:\\Users\\11048\Desktop\\out_evaluate.xlsx'#评估结果输出地址,指定地址即可，会自动创建
+    input_excel='sample.xlsx'#输入文件有4列：题型、科室、LLM回答、真实答案；
+    output_excel='out_evaluate.xlsx'#评估结果的输出地址
     data=score_computer(input_excel)
     #create_new_Excel_files(output_excel)
     write_QC_to_excel(data,output_excel)
