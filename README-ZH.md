@@ -7,7 +7,7 @@ PediaBench是首个全面的中文儿科数据集，旨在评估大型语言模�
 - 多样的问题类型：包含4565个客观问题和1632个主观问题，跨越12个儿科疾病组。
 - 综合评分标准：基于五种问题类型评估LLMs的熟练程度。
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/data example.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/data-example.png)
 
 ## 使用指南
 pediabench数据集位于/data目录中，在获取到模型的回答之后，请将模型对于五种题目的回答汇总于一个xlsx文件中，接着使用评估代码xx运行得到结果。
