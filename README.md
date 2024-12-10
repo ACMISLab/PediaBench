@@ -6,7 +6,7 @@
 
 
 <p align="center">
-<a href="https://github.com/SJTU-LIT/ceval/blob/main/README.md">English | <a href="https://github.com/SJTU-LIT/ceval/blob/main/README_zh.md">中文</a>
+<a href="https://github.com/SJTU-LIT/ceval/blob/main/README.md">English | <a href="https://github.com/SJTU-LIT/ceval/blob/main/README_ZH.md">中文</a>
 </p>
 
 
@@ -14,9 +14,9 @@
 
 PediaBench is the first comprehensive Chinese pediatric dataset designed to evaluate the performance of large language models (LLMs) in the medical field, particularly in pediatric question answering (QA). 
 
-It comprises 4,565 objective and 1,632 subjective questions sourced from diverse channels, covering five distinct question types across 12 typical pediatric disease groups, as shown below. If you would like to learn more details, please check our [paper](https://arxiv.org/abs/xxxx).
+It comprises 4,565 objective and 1,632 subjective questions sourced from diverse channels, covering five distinct question types across 12 typical pediatric disease groups, as shown below. If you would like to learn more details, please check our [paper](https://arxiv.org/abs/2412.06287).
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/overview.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/overview.png)
 
 ## 2.Dataset 
 ### 2.1 Types of Questions
@@ -28,7 +28,7 @@ To assess how well an LLM can serve as an AI assistant for pediatricians, PediaB
 - **Essay/Short Answer (ES)**: This type of question asks one to elaborate on a specific concept. It requires an LLM to generate coherent and accurate text relevant to the concept.
 - **Case Analysis (CA)**: This type of question presents an LLM with a description of a particular instance and asks the LLM to make a medical diagnosis and provide treatment measures. It can comprehensively evaluate the medical capacity of an LLM in terms of comprehension, reasoning, and problem-solving.
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/question-types.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/question-types.png)
 
 ### 2.2 Dataset Statistics
 The PediaBench dataset consists of 5,749 questions, including 258 true-or-false questions, 3,576 multiple-choice questions, 283 pairing questions, 1,565 essay/short-answer questions, and 67 case analysis questions.
@@ -36,7 +36,7 @@ The PediaBench dataset consists of 5,749 questions, including 258 true-or-false 
 Referring to the International Classification of Diseases (ICD-11) standard issued by the WHO, except for case analysis questions, the remaining 5,682 questions are organized into 12 distinct disease groups, namely, diseases of the renal system, emergency and critical care, diseases of the infection system, diseases of the blood system, diseases of the cardiovascular system, diseases of the immune system, diseases of the respiratory system, endocrine or metabolic diseases, health care and developmental abnormalities, neonatal diseases, diseases of the alimentary system, and diseases of the nervous system.
 
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/data-example.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/data-example.png)
 
 ### 2.3 Evaluation Criteria
 **To provide an accurate evaluation of the performance of each LLM for QA in pediatrics, we use a scoring criterion that combines difficulty levels and automatic scoring.**
@@ -55,7 +55,7 @@ We set up prompts for GPT-4o to act as a referee to rate the responses of all ot
 
 The overall score of an LLM for all questions is the weighted sum of the scores of all correctly answered questions. The following is a statistics on the number of ToF and MC questions at different difficulty levels.
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/difficult-level.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/difficult-level.png)
 
 ## 3. Experiment
 ### 3.1 Main Results
@@ -68,7 +68,7 @@ We validate PediaBench through experiments with 20 general-purpose and medical L
 In order to quantify the score, we calculated the proportion of LLMs' score based on the inconsistent number of questions and scores for each disease group. Most models achieve their highest scores in the two disease groups of HCDA of DImS.
 No models can perform well for subjective questions in all performance measures across different groups of diseases. 
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/disease-group-results.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/disease-group-results.png)
 
 ## 4. Usage Guide
 The pediabench dataset is located in the /data directory. After obtaining the model's responses, please compile the model's answers to the five question types into an xlsx file. Then, use the evaluation code to obtain the results.
@@ -91,9 +91,12 @@ All data sources we use to construct the PediaBench dataset are publicly availab
 ## Citation
 If you find the code and test set useful for your research, please consider citing:
 
-     @article{Pediabench,
-      title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models},
-      author={Qian Zhang,Panfeng Chen,  Jiali Li, Linkun Feng, Shuyu Liu, Mei Chen, Hui Li, Yanhao Wang},
-      journal={arXiv preprint arXiv:xxxx},
-      year={2024}
-    }
+@misc{zhang2024pediabenchcomprehensivechinesepediatric,
+  title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models}, 
+  author={Qian Zhang and Panfeng Chen and Jiali Li and Linkun Feng and Shuyu Liu and Mei Chen and Hui Li and Yanhao Wang},
+  year={2024},
+  eprint={2412.06287},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2412.06287}, 
+}

@@ -8,9 +8,9 @@
 ## 1.介绍
 
 PediaBench是首个全面的中国儿科数据集，旨在评估大型语言模型（LLM）在医学领域特别是在儿科问答（QA）方面的性能。
-它包括来自不同数据源的4565个客观问题和1632个主观问题，涵盖了12类典型儿科疾病组的五种不同问题类型，如下所示。如果您想了解更多细节，请查看我们的[论文](https://arxiv.org/abs/xxxx).
+它包括来自不同数据源的4565个客观问题和1632个主观问题，涵盖了12类典型儿科疾病组的五种不同问题类型，如下所示。如果您想了解更多细节，请查看我们的[论文](https://arxiv.org/abs/2412.06287).
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/overview.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/overview.png)
 
 
 ## 2.数据集 
@@ -24,7 +24,7 @@ PediaBench是首个全面的中国儿科数据集，旨在评估大型语言模�
 - **案例分析（CA）**：这类问题向LLMs给出一个特定病例的描述，要求LLMs进行医学诊断并提供治疗措施。它可以全面评估LLMs在理解、推理和解决问题方面的医疗能力。
 
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/question-types.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/question-types.png)
 
 
 
@@ -34,7 +34,7 @@ PediaBench数据集包含5749个问题，其中包括258个判断题、3576个�
 根据世界卫生组织发布的国际疾病分类（ICD-11）标准，除病例分析问题外，其余5682个问题分为12个不同的疾病组，即肾系统疾病、急诊和重症监护、感染系统疾病、血液系统疾病、心血管系统疾病、免疫系统疾病、呼吸系统疾病、内分泌或代谢疾病、保健和发育异常、新生儿疾病、消化系统疾病和神经系统疾病。
 
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/data-example.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/data-example.png)
 
 
 ###2.3评估标准
@@ -49,7 +49,7 @@ PediaBench数据集包含5749个问题，其中包括258个判断题、3576个�
 
 LLMs得到的总分为正确回答问题的得分的总和。以下是不同难度级别的ToF和MC问题数量的统计数据。
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/difficult-level.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/difficult-level.png)
 
 
 ## 3.实验
@@ -57,12 +57,12 @@ LLMs得到的总分为正确回答问题的得分的总和。以下是不同难�
 
 我们在20个通用和医学LLM上验证了PediaBench，其中包括各种规模的开源和商业模型。我们为所有LLM设置了标准化的提示集，并在所有实验中一致采用zero-shot。LLM的整体性能结果如下所示。BianQue-7B和QizhenGPT-13B不能正确理解和遵循客观题的回复要求，因此他们在这些类型中的得分为0。
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/main-results.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/main-results.png)
 
 ### 3.2不同疾病组的结果
 我们给出了不同LLMs在不同疾病组上的分数，大多数模型在DImS的HCDA两个疾病组中得分较高。任何模型都不能很好地回答主观题。
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/disease-group-results.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/disease-group-results.png)
 
 ## 4.使用指南
 pediabench数据集位于`/data`目录中。在获得模型的答案后，请将模型对于五种类问题的回答编译成xlsx文件。然后使用评估代码获得结果。
@@ -88,12 +88,15 @@ pediabench数据集位于`/data`目录中。在获得模型的答案后，请将
 ## 引用
 如果您发现代码和测试集对您的研究有用，请考虑引用：
 
-     @article{Pediabench,
-      title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models},
-      author={Qian Zhang,Panfeng Chen,  Jiali Li, Linkun Feng, Shuyu Liu, Mei Chen, Hui Li, Yanhao Wang},
-      journal={arXiv preprint arXiv:xxxx},
-      year={2024}
-    }
+@misc{zhang2024pediabenchcomprehensivechinesepediatric,
+  title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models}, 
+  author={Qian Zhang and Panfeng Chen and Jiali Li and Linkun Feng and Shuyu Liu and Mei Chen and Hui Li and Yanhao Wang},
+  year={2024},
+  eprint={2412.06287},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2412.06287}, 
+}
 
 
 
