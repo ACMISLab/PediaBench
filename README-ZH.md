@@ -2,7 +2,7 @@
 # PediaBench：一个全面的中文儿科数据集，用于大型语言模型的基准测试
 
 <p align="center">
-<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README_ZH.md">中文</a>
+<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README-ZH.md">中文</a>
 </p>
 
 ## 1.介绍
