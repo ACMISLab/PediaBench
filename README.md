@@ -6,7 +6,7 @@
 
 
 <p align="center">
-<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README_ZH.md">中文</a>
+<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README-ZH.md">中文</a>
 </p>
 
 
@@ -62,7 +62,7 @@ The overall score of an LLM for all questions is the weighted sum of the scores 
 
 We validate PediaBench through experiments with 20 general-purpose and medical LLMs, including open-source and commercial models of various scales. A standardized prompt set was developed for all LLMs, and a zero-shot prompt setting was applied consistently across all experiments. The results for the overall performance of LLMs are shown below. BianQue-7B and QiZhenGPT-13B cannot correctly understand and follow the instructions for the objective questions, thus their scores are 0 for these types.
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/main-results.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/main-results.png)
 
 ### 3.2 Results in different disease groups 
 In order to quantify the score, we calculated the proportion of LLMs' score based on the inconsistent number of questions and scores for each disease group. Most models achieve their highest scores in the two disease groups of HCDA of DImS.
