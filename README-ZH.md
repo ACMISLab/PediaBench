@@ -2,7 +2,7 @@
 # PediaBench：一个全面的中文儿科数据集，用于大型语言模型的基准测试
 
 <p align="center">
-<a href="https://github.com/SJTU-LIT/ceval/blob/main/README.md">English | <a href="https://github.com/SJTU-LIT/ceval/blob/main/README_ZH.md">中文</a>
+<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README_ZH.md">中文</a>
 </p>
 
 ## 1.介绍
@@ -24,7 +24,7 @@ PediaBench是首个全面的中国儿科数据集，旨在评估大型语言模�
 - **案例分析（CA）**：这类问题向LLMs给出一个特定病例的描述，要求LLMs进行医学诊断并提供治疗措施。它可以全面评估LLMs在理解、推理和解决问题方面的医疗能力。
 
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/question-types.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/questions-types.png)
 
 
 
@@ -65,11 +65,11 @@ LLMs得到的总分为正确回答问题的得分的总和。以下是不同难�
 ![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/disease-group-results.png)
 
 ## 4.使用指南
-pediabench数据集位于`/data`目录中。在获得模型的答案后，请将模型对于五种类问题的回答编译成xlsx文件。然后使用评估代码获得结果。
+- pediabench数据集位于`/data`目录中。在获得模型的答案后，请将模型对于五种类问题的回答整理成`.xlsx`文件。然后使用评估代码获得结果。
 
-您需要提交的xlsx文件应该类似于`samples.xlsx`。
+- 您需要提交的`.xlsx`文件应该类似于`samples.xlsx`。
 
-通过运行评估代码，您将收到一个xlsx文件，其中包含不同疾病组不同问题类型的分数，以及最终的加权总分。
+- 通过运行评估代码，您将收到一个`.xlsx`文件，其中包含不同疾病组不同问题类型的分数，以及最终的加权总分。
 
 
 ## 5.其他
@@ -88,16 +88,16 @@ pediabench数据集位于`/data`目录中。在获得模型的答案后，请将
 ## 引用
 如果您发现代码和测试集对您的研究有用，请考虑引用：
 
-@misc{zhang2024pediabenchcomprehensivechinesepediatric,
-  title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models}, 
-  author={Qian Zhang and Panfeng Chen and Jiali Li and Linkun Feng and Shuyu Liu and Mei Chen and Hui Li and Yanhao Wang},
-  year={2024},
-  eprint={2412.06287},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2412.06287}, 
-}
-
+    @misc{zhang2024pediabenchcomprehensivechinesepediatric,
+      title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models}, 
+      author={Qian Zhang and Panfeng Chen and Jiali Li and Linkun Feng and Shuyu Liu and Mei Chen and Hui Li and Yanhao Wang},
+      year={2024},
+      eprint={2412.06287},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2412.06287}, 
+    }
+    
 
 
 

@@ -6,7 +6,7 @@
 
 
 <p align="center">
-<a href="https://github.com/SJTU-LIT/ceval/blob/main/README.md">English | <a href="https://github.com/SJTU-LIT/ceval/blob/main/README_ZH.md">中文</a>
+<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README_ZH.md">中文</a>
 </p>
 
 
@@ -28,7 +28,7 @@ To assess how well an LLM can serve as an AI assistant for pediatricians, PediaB
 - **Essay/Short Answer (ES)**: This type of question asks one to elaborate on a specific concept. It requires an LLM to generate coherent and accurate text relevant to the concept.
 - **Case Analysis (CA)**: This type of question presents an LLM with a description of a particular instance and asks the LLM to make a medical diagnosis and provide treatment measures. It can comprehensively evaluate the medical capacity of an LLM in terms of comprehension, reasoning, and problem-solving.
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/question-types.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/questions-types.png)
 
 ### 2.2 Dataset Statistics
 The PediaBench dataset consists of 5,749 questions, including 258 true-or-false questions, 3,576 multiple-choice questions, 283 pairing questions, 1,565 essay/short-answer questions, and 67 case analysis questions.
@@ -71,11 +71,11 @@ No models can perform well for subjective questions in all performance measures 
 ![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/disease-group-results.png)
 
 ## 4. Usage Guide
-The pediabench dataset is located in the /data directory. After obtaining the model's responses, please compile the model's answers to the five question types into an xlsx file. Then, use the evaluation code to obtain the results.
+- The pediabench dataset is located in the `/data` directory. After obtaining the model's responses, please compile the model's answers to the five question types into an `.xlsx` file. Then, use the evaluation code to obtain the results.
 
-The xlsx file you need to submit should refer to the following file: `samples.xlsx`.
+- The `.xlsx` file you need to submit should refer to the following file: `samples.xlsx`.
 
-By running the evaluate code, you will receive an xlsx file containing scores for different question types across different disease groups, as well as a final weighted total score.
+- By running the evaluate code, you will receive an `.xlsx` file containing scores for different question types across different disease groups, as well as a final weighted total score.
 
 ## 5. Side notes
 ### 5.1 Limilation
@@ -91,12 +91,13 @@ All data sources we use to construct the PediaBench dataset are publicly availab
 ## Citation
 If you find the code and test set useful for your research, please consider citing:
 
-@misc{zhang2024pediabenchcomprehensivechinesepediatric,
-  title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models}, 
-  author={Qian Zhang and Panfeng Chen and Jiali Li and Linkun Feng and Shuyu Liu and Mei Chen and Hui Li and Yanhao Wang},
-  year={2024},
-  eprint={2412.06287},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2412.06287}, 
-}
+    @misc{zhang2024pediabenchcomprehensivechinesepediatric,
+      title={PediaBench: A Comprehensive Chinese Pediatric Dataset for Benchmarking Large Language Models}, 
+      author={Qian Zhang and Panfeng Chen and Jiali Li and Linkun Feng and Shuyu Liu and Mei Chen and Hui Li and Yanhao Wang},
+      year={2024},
+      eprint={2412.06287},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2412.06287}, 
+    }
+    
