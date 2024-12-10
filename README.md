@@ -42,12 +42,12 @@ Referring to the International Classification of Diseases (ICD-11) standard issu
 **To provide an accurate evaluation of the performance of each LLM for QA in pediatrics, we use a scoring criterion that combines difficulty levels and automatic scoring.**
 
 - **For ToF and MC:** We use accuracy as a basic performance measure for each question. And design a scoring scheme based on difficulty coefficient to assess the overall performance of each LLM.
-All questions are then divided into four difficulty levels, namely **simple**, **normal**, **difficult**, and **extreme**
+All questions are then divided into four difficulty levels, namely **simple**, **normal**, **difficult**, and **extreme**.
 
 - **For PA:** We use the following scoring rules: (1) A completely correct answer gets 3 points; (2) a partially correct answer gets 1 point; and (3) a completely incorrect answer does not get any points.
 
 
-- **For ES and CA:**They are open questions with no unique answers.
+- **For ES and CA:** They are open questions with no unique answers.
 CA is even harder than ES so we assign a weight of 5 to each ES question and 10 to each CA question.
 specially, we introduce an automated scoring scheme based on LLMs.
 We set up prompts for GPT-4o to act as a referee to rate the responses of all other LLMs. and quantify the agreement between the human and GPT-4o scoring results.
