@@ -45,7 +45,7 @@ Referring to the International Classification of Diseases (ICD-11) standard issu
 Then, we design a scoring scheme based on \emph{difficulty coefficient} to assess the overall performance of each LLM.
 We calculate the difficulty coefficient $Dc_i$ of each question $i$ based on the accuracy of each LLM's answer.
 Specifically, we have $Dc_{i}=1-\frac{num^{acc_i}}{num^{llm_i}}$, where $num^{acc}_i$ is the number of LLMs that correctly answer question $i$ and $num^{llm}_i$ is the total number of LLMs in the evaluation.
-All questions are then divided into four \emph{difficulty levels}, namely \emph{simple}, \emph{normal}, \emph{difficult}, and \emph{extreme}, with different weights $w_i$ based on $Dc_i$ in the scoring scheme as follows: $Dc_i \in [0,0.2)$,score=0.5;$Dc_i \in [0.2,0.5)$,score=1;$Dc_i \in [0.5,0.8)$,score=1.5;$Dc_i \in [0.8,1]$,score=2;
+All questions are then divided into four \emph{difficulty levels}, namely \emph{simple}, \emph{normal}, \emph{difficult}, and \emph{extreme}, with different weights $w_i$ based on $Dc_i$ in the scoring scheme as follows: $Dc_i \in [0,0.2)$, score=0.5; $Dc_i \in [0.2,0.5)$, score=1; $Dc_i \in [0.5,0.8)$, score=1.5; $Dc_i \in [0.8,1]$, score=2.
 
 - **For PA:** We use the following scoring rules: (1) A completely correct answer gets 3 points; (2) a partially correct answer gets 1 point; and (3) a completely incorrect answer does not get any points.
 
