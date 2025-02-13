@@ -14,7 +14,7 @@
 
 PediaBench is the first comprehensive Chinese pediatric dataset designed to evaluate the performance of large language models (LLMs) in the medical field, particularly in pediatric question answering (QA). 
 
-It comprises 4,565 objective and 1,632 subjective questions sourced from diverse channels, covering five distinct question types across 12 typical pediatric disease groups, as shown below. If you would like to learn more details, please check our [paper](https://arxiv.org/abs/2412.06287).
+It comprises 4,117 objective and 1,632 subjective questions sourced from diverse channels, covering five distinct question types across 12 typical pediatric disease groups, as shown below. If you would like to learn more details, please check our [paper](https://arxiv.org/abs/2412.06287).
 
 ![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/overview.png)
 
@@ -41,8 +41,17 @@ Referring to the International Classification of Diseases (ICD-11) standard issu
 ### 2.3 Evaluation Criteria
 **To provide an accurate evaluation of the performance of each LLM for QA in pediatrics, we use a scoring criterion that combines difficulty levels and automatic scoring.**
 
-- **For ToF and MC:** We use accuracy as a basic performance measure for each question. And design a scoring scheme based on difficulty coefficient to assess the overall performance of each LLM.
-All questions are then divided into four difficulty levels, namely **simple**, **normal**, **difficult**, and **extreme**.
+- **For ToF and MC:** We use \emph{accuracy} as a basic performance measure for each question.
+Then, we design a scoring scheme based on \emph{difficulty coefficient} to assess the overall performance of each LLM.
+We calculate the difficulty coefficient $Dc_i$ of each question $i$ based on the accuracy of each LLM's answer.
+Specifically, we have $Dc_{i} = 1 - \frac{\text{num}^{\text{acc}}_i}{\text{num}^{\text{llm}}_i}$, where $\text{num}^{\text{acc}}_i$ is the number of LLMs that correctly answer question $i$ and $\text{num}^{\text{llm}}_i$ is the total number of LLMs in the evaluation.
+All questions are then divided into four \emph{difficulty levels}, namely \emph{simple}, \emph{normal}, \emph{difficult}, and \emph{extreme}, with different weights $w_i$ based on $Dc_i$ in the scoring scheme as follows:
+$w_i = \begin{cases}
+            0.5, & Dc_i \in [0,0.2) \\
+            1, & Dc_i \in [0.2,0.5) \\
+            1.5, & Dc_i \in [0.5,0.8) \\
+            2, & Dc_i \in [0.8,1].
+          \end{cases} $
 
 - **For PA:** We use the following scoring rules: (1) A completely correct answer gets 3 points; (2) a partially correct answer gets 1 point; and (3) a completely incorrect answer does not get any points.
 
