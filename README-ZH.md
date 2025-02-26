@@ -2,7 +2,7 @@
 # PediaBench：一个全面的中文儿科数据集，用于大型语言模型的基准测试
 
 <p align="center">
-<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README-ZH.md">中文</a>
+<a href="https://github.com/ACMISLab/PediaBench/blob/main/README.md">🎨 English | <a href="https://github.com/ACMISLab/PediaBench/blob/main/README-ZH.md">🏞️ 中文</a>
 </p>
 
 ## 👩‍🦱 1.介绍
@@ -81,9 +81,10 @@ LLMs得到的总分为正确回答问题的得分的总和。以下是不同难�
 ### 3.3 ES题目的多维度实验结果
 我们为GPT-4o设置提示，让其充当裁判，对所有其他LLM对ES题目的回答进行评分。我们对模型回答的四个维度进行评估：准确性、全面性、流畅性、总体评分。最后我们将总体评分的分数作为LLMs在ES问题上的最终得分。
 
+
 ![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/total-radar.png)
 
-
+可以看出，大多数LLM在流畅性方面表现良好，但在全面性和准确性方面需要进一步改进。特别是在医疗领域，准确性是一个十分关键的问题。在后续的研究中，应该避免模型产生幻觉，并确保LLM回复的正确性。
 
 ### 3.4 不同疾病组的结果
 我们给出了不同LLMs在不同疾病组上的分数，大多数模型在DImS的HCDA两个疾病组中得分较高。任何模型都不能很好地回答主观题。
