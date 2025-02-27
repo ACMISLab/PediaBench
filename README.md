@@ -55,8 +55,9 @@ CA is even harder than ES so we assign a weight of 5 to each ES question and 10 
 specially, we introduce an automated scoring scheme based on LLMs.
 We set up prompts for GPT-4o to act as a referee to rate the responses of all other LLMs. and quantify the agreement between the human and GPT-4o scoring results.
 
+We first calculate the accuracy of different types of questions based on the above criteria, and then assign different scores to them (10 points for ToF questions, 40 points for MC questions, 10 points for PA questions, 30 points for ES questions, and 10 points for CA questions). Then final total score of LLMs is obtained by: $\mathrm{S}_{\text{total}} = \mathrm{S}_{\text{ToF}} \times {10} + \mathrm{S}_{\text{MC}} \times {40} + \mathrm{S}_{\text{PA}} \times{10} + \mathrm{S}_{\text{ES}} \times{30} + \mathrm{S}_{\text{CA}} \times{10}$. 
 
-The overall score of an LLM for all questions is the weighted sum of the scores of all correctly answered questions. The following is a statistics on the number of ToF and MC questions at different difficulty levels.
+The following is the statistical data on the number of ToF and MC questions at different difficulty levels.
 
 ![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/difficult-level.png)
 
@@ -72,7 +73,7 @@ Table 6 presents detailed information on the LLMs we evaluate and use, where “
 
 We validate PediaBench through experiments with 20 general-purpose and medical LLMs, including open-source and commercial models of various scales. A standardized prompt set was developed for all LLMs, and a zero-shot prompt setting was applied consistently across all experiments. The results for the overall performance of LLMs are shown below. BianQue-7B and QiZhenGPT-13B cannot correctly understand and follow the instructions for the objective questions, thus their scores are 0 for these types.
 
-![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/main-results.png)
+![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/main-result2.png)
 
 
 🎯 **Result Analysis**
@@ -99,15 +100,6 @@ No models can perform well for subjective questions in all performance measures 
 
 ![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/disease-group-results.png)
 
-
-
-### *Tips
-
-Specifically, we experimented with an alternative scoring method. First, we calculated the accuracy rates for different types of questions. Then, we assigned different point values to each type: 10 points for ToF questions, 20 points for MC questions, 20 points for MA questions, 20 points for ES questions, and 30 points for CA questions. The final scores obtained are shown in the table below.
-
-![image](https://github.com/ACMISLab/PediaBench/blob/main/figure/main-result2.png)
-
-Although the results obtained under this evaluation condition are not exactly the same as those we provided in the letter, the relative ranking of the models remains almost unchanged. Under this evaluation condition, the best-performing model is still Qwen-MAX.
 
 
 ## 🚀 4. Usage Guide
